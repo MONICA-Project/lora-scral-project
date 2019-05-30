@@ -1,0 +1,21 @@
+[submodule "MonicaScral"]
+	path = MonicaScral
+	url = https://gitlab.fit.fraunhofer.de/monica/scral-uploader/monicascral.git
+[submodule "Utils/ConnectorDataMqtt"]
+	path = Utils/ConnectorDataMqtt
+	url = http://git.blubbfish.net/vs_utils/ConnectorDataMqtt.git
+[submodule "Utils/Utils"]
+	path = Utils/Utils
+	url = http://git.blubbfish.net/vs_utils/Utils.git
+[submodule "Utils/Utils-IoT"]
+	path = Utils/Utils-IoT
+	url = http://git.blubbfish.net/vs_utils/Utils-IoT.git
+[submodule "Librarys/litjson"]
+	path = Librarys/litjson
+	url = http://git.blubbfish.net/vs_librarys/litjson.git
+[submodule "Librarys/mqtt"]
+	path = Librarys/mqtt
+	url = http://git.blubbfish.net/vs_librarys/mqtt.git
+[submodule "Librarys/Mono.Posix"]
+	path = Librarys/Mono.Posix
+	url = http://git.blubbfish.net/vs_librarys/Mono.Posix.git
