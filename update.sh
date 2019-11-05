@@ -1,34 +1,108 @@
-echo "Switch to subdir Librarys"
-cd Librarys
-echo "Pull litjson"
-cd litjson
-git pull
-cd ..
-echo "Pull Mono.Posix"
-cd Mono.Posix
-git pull
-cd ..
-echo "Pull mqtt"
-cd mqtt
-git pull
-cd ..
-cd ..
-echo "Pull MonicaScral"
-cd MonicaScral
-git pull
-cd ..
-echo "Switch to subdir Utils"
-cd Utils
-echo "Pull ConnectorDataMqtt"
-cd ConnectorDataMqtt
-git pull
-cd ..
-echo "Pull Utils"
-cd Utils
-git pull
-cd ..
-echo "Pull Utils-IoT"
-cd Utils-IoT
-git pull
-cd ..
-read -p "Press return"
+#!/bin/bash
+echo "Pull Librarys/litjson"
+if [ -a Librarys/litjson/.git ] 
+then
+	cd Librarys/litjson
+	git pull
+	cd ..
+	cd ..
+else
+	git submodule update --init --  Librarys/litjson
+	cd Librarys/litjson
+	git checkout master
+	cd ..
+	cd ..
+fi
+
+echo "Pull Librarys/Mono.Posix"
+if [ -a Librarys/Mono.Posix/.git ] 
+then
+	cd Librarys/Mono.Posix
+	git pull
+	cd ..
+	cd ..
+else
+	git submodule update --init --  Librarys/Mono.Posix
+	cd Librarys/Mono.Posix
+	git checkout master
+	cd ..
+	cd ..
+fi
+
+echo "Pull Librarys/mqtt"
+if [ -a Librarys/mqtt/.git ] 
+then
+	cd Librarys/mqtt
+	git pull
+	cd ..
+	cd ..
+else
+	git submodule update --init --  Librarys/mqtt
+	cd Librarys/mqtt
+	git checkout master
+	cd ..
+	cd ..
+fi
+
+echo "Pull Lora-Scral"
+if [ -a Lora-Scral/.git ] 
+then
+	cd Lora-Scral
+	git pull
+	cd ..
+else
+	git submodule update --init --  Lora-Scral
+	cd Lora-Scral
+	git checkout master
+	cd ..
+fi
+
+echo "Pull Utils/ConnectorDataMqtt"
+if [ -a Utils/ConnectorDataMqtt/.git ] 
+then
+	cd Utils/ConnectorDataMqtt
+	git pull
+	cd ..
+	cd ..
+else
+	git submodule update --init --  Utils/ConnectorDataMqtt
+	cd Utils/ConnectorDataMqtt
+	git checkout master
+	cd ..
+	cd ..
+fi
+
+echo "Pull Utils/Utils"
+if [ -a Utils/Utils/.git ] 
+then
+	cd Utils/Utils
+	git pull
+	cd ..
+	cd ..
+else
+	git submodule update --init --  Utils/Utils
+	cd Utils/Utils
+	git checkout master
+	cd ..
+	cd ..
+fi
+
+echo "Pull Utils/Utils-IoT"
+if [ -a Utils/Utils-IoT/.git ] 
+then
+	cd Utils/Utils-IoT
+	git pull
+	cd ..
+	cd ..
+else
+	git submodule update --init --  Utils/Utils-IoT
+	cd Utils/Utils-IoT
+	git checkout master
+	cd ..
+	cd ..
+fi
+
+if [ -z "$1" ]
+then
+	read -p "Please Press key"
+fi

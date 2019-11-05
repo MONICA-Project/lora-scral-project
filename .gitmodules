@@ -1,6 +1,6 @@
-[submodule "MonicaScral"]
-	path = MonicaScral
-	url = https://gitlab.fit.fraunhofer.de/monica/scral-uploader/monicascral.git
+[submodule "Lora-Scral"]
+	path = Lora-Scral
+	url = https://github.com/MONICA-Project/Lora-Scral.git
 [submodule "Utils/ConnectorDataMqtt"]
 	path = Utils/ConnectorDataMqtt
 	url = http://git.blubbfish.net/vs_utils/ConnectorDataMqtt.git
