@@ -1,0 +1,13 @@
+version: '2.3'
+
+services:
+  lorascral:
+    build:
+      context: .
+    image: monicaproject/lora-scral-project:latest
+    command: ["mono","./Lora-Scral.exe"]
+    ports:
+      - 8080:8080
+    volumes:
+      - "./config/settings.conf:/etc/monicascral/settings.conf"
+
