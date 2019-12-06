@@ -14,7 +14,7 @@ COPY Utils/Utils /build/Utils/Utils
 COPY Utils/Utils-IoT /build/Utils/Utils-IoT
 
 WORKDIR /build/Lora-Scral
-RUN dotnet build Lora-Scral_Core.sln --configuration Release
+RUN dotnet build Lora-Scral.sln --configuration Release
 
 RUN mkdir /usr/local/bin/lorascral -p
 RUN cp Lora-Scral/bin/Release/netcoreapp3.0/*.dll /usr/local/bin/lorascral -r
