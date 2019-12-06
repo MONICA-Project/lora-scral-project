@@ -1,10 +1,10 @@
 version: '2.3'
 
 services:
-  ttnbridge:
+  lorascral:
     build:
       context: .
-    image: monicaproject/ttn-bridge:latest
-    command: ["dotnet","./TTN-Bridge.dll"]
+    image: monicaproject/lorascral:latest
+    command: ["dotnet","./Lora-Scral.dll"]
     volumes:
-      - "./config:/etc/ttnbridge"
+      - "./config:/etc/lorascral"

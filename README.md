@@ -45,15 +45,15 @@ On Windows you can create with `Lora-Scral/Lora-Scral/dpkg/create-Builds.bat` de
 
 #### Linux
 
-[Checkout this repo](#Checkout) and run: `msbuild /p:Configuration="Release" /p:Platform="Any CPU" /p:OutputPath="./bin/Release/" "Lora-Scral/Lora-Scral.sln"`
+[Checkout this repo](#Checkout) and run: `dotnet build Lora-Scral_Core.sln --configuration Release`
 
-You must have `mono-complete`, `libmono-posix4.0-cil` installed
+You must have `dotnet-sdk-3.0` installed
 
 If you want to have deb files run `cd Lora-Scral/Lora-Scral/dpkg` and `bash make-deb.sh amd64` that you can install with `sudo dpkg -i amd64-monicascral_x.x-x.deb`
 
 ### Prerequisite
 
-On Windows you need C# Runtime 4.7.2, on linux you need Mono, installation instructions are available [here](https://www.mono-project.com/download/stable/#download-lin-debian). You need only setup apt.
+You need C# .NET Core 3, installation instructions are available [here](https://docs.microsoft.com/en-us/dotnet/core/install/linux-package-manager-debian10). You need only setup apt.
 
 If you install the deb packets, it will check and install all dependencies.
 
