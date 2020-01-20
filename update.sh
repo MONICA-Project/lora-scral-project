@@ -87,6 +87,21 @@ else
 	cd ..
 fi
 
+echo "Pull Utils/Bot-Utils"
+if [ -a Utils/Bot-Utils/.git ] 
+then
+	cd Utils/Bot-Utils
+	git pull
+	cd ..
+	cd ..
+else
+	git submodule update --init --  Utils/Bot-Utils
+	cd Utils/Bot-Utils
+	git checkout master
+	cd ..
+	cd ..
+fi
+
 if [ -z "$1" ]
 then
 	read -p "Please Press key"
